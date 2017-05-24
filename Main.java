@@ -192,6 +192,7 @@ public class Main {
 			
 			while(x < total) {
 				bufferedWriter.write("\n" + persons[x].revert());
+				bufferedWriter.newLine();
 				x++;
 			}
 						
@@ -264,8 +265,10 @@ public class Main {
 			BufferedReader bufferedReader = new BufferedReader(filereader);
 			
 			while((line = bufferedReader.readLine()) != null) {
-				hperson[x] = getEmployeeDetails(line, hperson[x]);
-				x++;
+				if (line.length() > 1) {
+					hperson[x] = getEmployeeDetails(line, hperson[x]);
+					x++;
+				}
 			}
 			
 			getCommand(hperson);
