@@ -207,8 +207,20 @@ public class Main {
 	}
 	
 	public static void exit(Employee[] persons) {
-		save(persons);
-		System.exit(0);
+		char answer;
+		Scanner reader = new Scanner(System.in);
+		
+		System.out.println("Do you want to save your changes before you exit? y/n");
+		answer = reader.next().charAt(0);
+		if (answer == 'y' || answer == 'Y') {
+			save(persons);
+			System.out.println("Your changes are saved. Goodbye.");
+			System.exit(0);
+		}
+		else {
+			System.out.println("Goodbye.");
+			System.exit(0);
+		}
 	}
 	
 	//showMenu function displays the menu at the start of the program
