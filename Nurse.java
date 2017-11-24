@@ -1,7 +1,7 @@
 package hospital;
 
 public class Nurse extends Employee {
-	int numpatients;
+	private int numpatients;
 	
 	public Nurse(char n, String nName, int nId, int nPatients) {
 		super(n, nName, nId);
@@ -17,12 +17,12 @@ public class Nurse extends Employee {
 	}
 	
 	public String revert() {
-		String output = eType + " " + name + " " + id + " " + numpatients;
+		String output = getType() + " " + getName() + " " + getId() + " " + numpatients;
 		return output;
 	}
 
 	public String toString() {
-		String output = "Name: " + name + " Employee Number: " + id + " Number of Patients: " + numpatients;
+		String output = "Name: " + getName() + " Employee Number: " + getId() + " Number of Patients: " + numpatients;
 		return output;
 	}
 }
