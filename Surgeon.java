@@ -1,7 +1,7 @@
 package hospital;
 
 public class Surgeon extends Doctor {
-	char operating;
+	private char operating;
 	
 	Surgeon(char s, String sname, int sid, String sSpecialty, char sOp) {
 		super(s, sname, sid, sSpecialty);
@@ -17,12 +17,13 @@ public class Surgeon extends Doctor {
 	}
 	
 	public String revert() {
-		String output = eType + " " + name + " " + id + " " + specialty + " " + operating;
+		String output = getType() + " " + getName() + " " + getId() + " " + getSpecialty() + " " + operating;
 		return output;
 	}
 	
 	public String toString() {
-		String output = "Name: " + name + " Employee Number: " + id + " Specialty: " + specialty + " Operating: " + operating;
+		String output = "Name: " + getName() + " Employee Number: " + getId() + " Specialty: " + getSpecialty() + 
+			" Operating: " + operating;
 		return output;
 	}
 }
