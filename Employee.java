@@ -1,9 +1,9 @@
 package hospital;
 
 public class Employee {
-	char eType;
-	String name;
-	int id;
+	private char eType;
+	private String name;
+	private int id;
 	
 	public Employee() {
 		
