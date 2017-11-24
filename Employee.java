@@ -6,7 +6,9 @@ public class Employee {
 	private int id;
 	
 	public Employee() {
-		
+		eType = '';
+		name = "";
+		id = 0;
 	}
 	
 	public Employee(char e, String ename, int eid) {
