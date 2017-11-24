@@ -1,7 +1,7 @@
 package hospital;
 
 public class Receptionist extends Administrator {
-	char answering;
+	private char answering;
 
 	public Receptionist(char r, String rname, int rId, String rDept, char rAns) {
 		super(r, rname, rId, rDept);
@@ -17,12 +17,13 @@ public class Receptionist extends Administrator {
 	}
 	
 	public String revert() {
-		String output = eType + " " + name + " " + id + " " + department + " " + answering;
+		String output = getType() + " " + getName() + " " + getId() + " " + getDepartment() + " " + answering;
 		return output;
 	}
 
 	public String toString() {
-		String output = "Name: " + name + " Employee Number: " + id + " Department: " + department + " Answering: " + answering;
+		String output = "Name: " + getName() + " Employee Number: " + getId() + " Department: " + getDepartment() + 
+			" Answering: " + answering;
 		return output;
 	}
 }
