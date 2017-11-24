@@ -1,7 +1,7 @@
 package hospital;
 
 public class Doctor extends Employee {
-	String specialty;
+	private String specialty;
 	
 	public Doctor(char d, String dname, int dId, String dspecialty) {
 		super(d, dname, dId);
@@ -17,12 +17,12 @@ public class Doctor extends Employee {
 	}
 	
 	public String revert() {
-		String output = eType + " " + name + " " + id + " " + specialty;
+		String output = getType() + " " + getName() + " " + getId() + " " + specialty;
 		return output;
 	}
 	
 	public String toString() {
-		String output = "Name: " + name + " Employee Number: " + id + " Specialty: " + specialty;
+		String output = "Name: " + getName() + " Employee Number: " + getId() + " Specialty: " + specialty;
 		return output;
 	}
 
